@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("#link").attr("href", "https://www.bing.com");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p>The attr() method also allows us to set the values of attributes.</p>
+
+    <p>For example, this button changes the href attribute of this link: <a href="https://www.google.com"
+            id="link">Google</a>
+    </p>
+
+    <button id="btn1">Change href</button>
+
+    <p>See that the link's destination changes from Google.com to Bing.com</p>
+
+
+</body>
+
+</html>
