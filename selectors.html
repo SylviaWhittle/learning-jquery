@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#elementbutton").click(function () {
+                $("p").hide();
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#idbutton").click(function () {
+                $("#test").hide();
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#classbutton").click(function () {
+                $(".test").hide();
+            });
+        });
+    </script>
+</head>
+<html>
+
+<body>
+
+    <p>paragraph 1</p>
+
+    <p>paragraph 2</p>
+
+    <p id="test">paragraph 3 with id: "test"</p>
+
+    <p class="test">paragraph 4 with class: "test"</p>
+
+    <button id="elementbutton">Click to hide all paragraphs using the element selector: p"</button>
+
+    <button id="idbutton">Click to only hide elements with id: "test"</button>
+
+    <button id="classbutton">Click to only hide elements with class: "test"</button>
+
+</body>
+
+</html>
