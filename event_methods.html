@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".single-click").click(function () {
+                $(this).hide();
+            });
+        });
+        $(document).ready(function () {
+            $(".hover-disappear").hover(function () {
+                $(this).hide();
+            });
+        });
+        $(document).ready(function () {
+            $(".double-click").dblclick(function () {
+                $(this).hide();
+            });
+        });
+
+        $(document).ready(function () {
+            $(".multiple-event-handler").on({
+                mouseenter: function () {
+                    $(this).css("background-color", "lightgray");
+                },
+                mouseleave: function () {
+                    $(this).css("background-color", "lightblue");
+                },
+                click: function () {
+                    $(this).css("background-color", "yellow");
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <p class="single-click">click this to make it disappear using the .click event</p>
+
+    <p class="hover-disappear">hover this to make it disappear using the .hover event</p>
+
+    <p class="double-click">double click this this to make it disappear using the .dbclick even</p>
+
+    <p class="multiple-event-handler">click or move the mouse over this paragraph. it uses the .on method which allows
+        allocating multiple event handlers to an element</p>
+
+</body>
+
+</html>
