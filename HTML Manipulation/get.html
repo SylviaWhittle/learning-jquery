@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                alert("text inside the div labelled #test, using the .text() function: " + $("#test").text());
+            });
+            $("#btn2").click(function () {
+                alert("html inside the div labelled #test, using the .html() function: " + $("#test").html());
+            });
+            $("#btn3").click(function () {
+                alert("value inside the text input field, using the .val function: " + $("#test-input").val());
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <p>DOM manipulation is an important part of jquery.</p>
+    <p>text() - sets or returns the text content of selected elements</p>
+    <p>html() sets or returns the content of selected elements including html markup</p>
+    <p>val() sets or returns the value of form fields</p>
+
+    <p>here's a list of all the methods used to manipulate the HTML and CSS of a site:
+        <a
+            href="https://www.w3schools.com/jquery/jquery_ref_html.asp">https://www.w3schools.com/jquery/jquery_ref_html.asp</a>
+    </p>
+
+    <p id="test"><b>example text!</b></p>
+
+    <p>input text: <input type="text" id="test-input" value="default_input"></p>
+
+    <button id="btn1">Show text</button>
+
+    <button id="btn2">Show html</button>
+
+    <button id="btn3">Show value</button>
+</body>
+
+</html>
