@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $(".test1").text(function (i, origText) {
+                    return "Old text: " + origText + " New text: replaced text! (index: " + i + ")";
+                });
+            });
+
+            $("#btn2").click(function () {
+                $("#test2").html(function (i, origText) {
+                    return "Old html: " + origText + " New html: <b>replaced html!</b> (index: " + i + ")";
+                });
+            });
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <p class="test1">This is a <b>bold</b> paragraph.</p>
+    <p class="test1">This is another paragraph</p>
+    <p id="test2">This is another <b>bold</b> paragraph.</p>
+
+    <button id="btn1">Show Old/New Text</button>
+    <button id="btn2">Show Old/New HTML</button>
+
+    <p>NOTE: i is the index of the matched element, see that it is 0 for the first replaced paragraph and 1 for the
+        second.</p>
+
+</body>
+
+</html>
