@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("#test1").text("replaced with text!");
+            });
+        });
+
+        $(document).ready(function () {
+            $("#btn2").click(function () {
+                $("#test2").html("<b>replaced with html!</b>");
+            });
+        });
+
+        $(document).ready(function () {
+            $("#btn3").click(function () {
+                $("#test3").val("replaced value!")
+            })
+        })
+    </script>
+
+</head>
+
+<body>
+
+    <p id="test1">this paragraph will be replaced by the 'text' button with text</p>
+    <p id="test2">this paragrpah will be replaced by the 'html' button</p>
+    <p>input field: <input type="text" id="test3" value="default_value"></p>
+
+    <p>the same three methods used in get.html can be used to set the values</p>
+
+    <button id="btn1">Set text</button>
+    <button id="btn2">Set html</button>
+    <button id="btn3">Set value in input field</button>
+
+</body>
+
+</html>
