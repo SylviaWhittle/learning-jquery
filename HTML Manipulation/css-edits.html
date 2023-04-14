@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn-add-class").click(function () {
+                $("h1, h2, p").addClass("blue");
+                $("div").addClass("test");
+            });
+            $("#btn-remove-class").click(function () {
+                $("h1, h2, p").removeClass("blue");
+                $("div").removeClass("test");
+            });
+            $("#btn-toggle-class").click(function () {
+                $("h1, h2, p").toggleClass("blue");
+                $("div").toggleClass("test");
+            });
+
+            $("#btn-get-css").click(function () {
+                alert("paragraph text colour: " + $("p").css("color"));
+            });
+
+            $("#btn-set-css").click(function () {
+                $("p").css("color", "red");
+            });
+        });
+    </script>
+    <style>
+        .test {
+            font-weight: bolder;
+            font-size: 50;
+        }
+
+        .blue {
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1> heading </h1>
+    <p>paragraph 1</p>
+    <div>text in a div</div>
+    <button id="btn-add-class">add classes</button>
+
+    <button id="btn-remove-class">remove classes</button>
+
+    <button id="btn-toggle-class">toggle classes</button>
+
+    <button id="btn-get-css">get css property from element</button>
+
+    <button id="btn-set-css">set css text colour for element</button>
+
+</body>
+
+</html>
