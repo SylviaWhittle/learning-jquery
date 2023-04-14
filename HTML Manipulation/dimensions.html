@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn-get-dims").click(function () {
+                var txt = "";
+                txt += "width: " + $("#div-1").width() + "</br>";
+                txt += "height: " + $("#div-1").height() + "</br>";
+                txt += "innerwidth: " + $("#div-1").innerWidth() + "</br>";
+                txt += "innerheight: " + $("#div-1").innerHeight() + "</br>";
+                $("#div-1").html(txt);
+            });
+
+            $("#btn-set-div-width").click(function () {
+                $("#div-1").width(500).height(500);
+            });
+        });
+    </script>
+    <style>
+        #div-1 {
+            height: 100px;
+            width: 300px;
+            padding: 10px;
+            margin: 3px;
+            border: 1px solid blue;
+            background-color: lightblue;
+        }
+    </style>
+</header>
+
+<body>
+
+    <div id="div-1">div 1</div>
+
+    <button id="btn-get-dims">display dimensions of div</button>
+
+    <p>
+        Note: innerwidth and innerheight contain the padding too. Outerwidth and outerheight contain padding plus
+        border. outerheight(true) contains margin too.
+    </p>
+
+    <p id="screen-dims">screen dims: </p>
+
+    <script>
+        $(document).ready(function () {
+            $("#screen-dims").append("w: " + $(window).width());
+            $("#screen-dims").append("h: " + $(window).height());
+        });
+    </script>
+
+
+    <button id="btn-set-div-width">set div width</button>
+
+
+</body>
+
+</html>
