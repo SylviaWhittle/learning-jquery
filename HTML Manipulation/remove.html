@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#div1").remove();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="div1">
+        <p>paragraph text</p>
+
+        <ol>
+            <li>list element</li>
+            <li>list element 2</li>
+        </ol>
+    </div>
+
+    <br>
+
+    <button>remove div element</button>
+
+</body>
+
+</html>
