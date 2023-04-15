@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#btn-get").click(function () {
+                $.get("test-get.asp", function (data, status) {
+                    alert("data: " + data + "\nstatus:" + status);
+                });
+            });
+
+            $("#btn-post").click(function () {
+                $.post("test-post.asp",
+                    {
+                        name: 'testname',
+                        city: 'london',
+                    },
+                    function (data, status) {
+                        alert("data: " + data + "\nstatus: " + status);
+                    });
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <button id="btn-get">get data from server</button>
+
+    <button id="btn-post">post data to the server</button>
+
+    This isn't working because we don't have a server set up. But it would work if we did, and the URL was in the
+    $.get() / $.post() methods.
+
+
+
+
+</body>
+
+</html>
