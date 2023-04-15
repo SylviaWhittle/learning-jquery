@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn-set-css-children").click(function () {
+                $(".test").children().css({ "border": "10px solid blue" });
+            });
+
+            $("#btn-find-child").click(function () {
+                $(".test").find("li").css({ "color": "green", "border": "1px solid yellow" });
+            });
+        });
+    </script>
+    <style>
+        .test {
+            border: 5px solid red;
+            padding: 10px;
+            margin: 20px;
+        }
+    </style>
+</header>
+
+<body>
+
+    <div class="test">
+
+        <p>
+        <ol>
+            <li>
+                list element 1
+            </li>
+            <li>
+                list element 2
+            </li>
+        </ol>
+        </p>
+
+    </div>
+
+    <button id="btn-set-css-children">set css of children to "test" class div</button>
+
+    <button id="btn-find-child">find child "li" under div class "test" and set css</button>
+
+    Note - can find all descendants with "*"
+
+</body>
+
+</html>
