@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("div").first().css("background-color", "pink");
+            $("div").last().css("background-color", "lightblue");
+            $("div").eq(1).css("background-color", "lightgreen");
+            $("div").filter(".filtered").css("background-color", "beige");
+        });
+    </script>
+</head>
+
+<body>
+    <div>first div - selected using the .first() method</div>
+    <div>second div - selected using .eq(1) indexing selector</div>
+    <div class="filtered">third div - selected using .filter() method into which was passed this div's class</div>
+    <div>fourth div</div>
+    <div>last div - selected using the .last() method</div>
+
+    There are lots more, for example the not() method that returns all elements that do not match the criteria.
+</body>
+
+</html>
