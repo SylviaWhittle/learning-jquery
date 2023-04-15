@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn-fetch-from-file").click(function () {
+                $("#div-1").load("text.txt");
+            });
+
+            $("#btn-fetch-with-callback").click(function () {
+                $("#div-2").load("text.txt", function (responseTxt, statusTxt, xhr) {
+                    alert("External content loaded successfully. Content: " + responseTxt + " | status: " + statusTxt + " | xml http request: " + xhr)
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="div-1">replace this text with text from file with button below</div>
+
+    <button id="btn-fetch-from-file">fetch text from file</button>
+
+    <div id="div-2">replace with text and get callback info</div>
+
+    <button id="btn-fetch-with-callback">fetch text from file, but obtain callback info</button>
+
+
+</body>
+
+</html>
