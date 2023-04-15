@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn-parent-colour").click(function () {
+                alert($("span").parent().css('border'));
+            });
+
+            $("#btn-get-parents").click(function () {
+                alert($("ol").parents());
+            });
+        });
+    </script>
+
+    <style>
+        .box {
+            display: block;
+            border: 2px solid rgb(255, 0, 0);
+            color: rgb(0, 101, 113);
+            padding: 5px;
+            margin: 15px;
+        }
+
+        .test {
+            border: 4px solid rgb(0, 0, 0);
+            padding: 5px
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <span>span</span>
+    </div>
+
+    <div class="box">
+        <span class="test">
+            <p>
+            <ol>
+                <li>
+                    list element 1
+                </li>
+            </ol>
+            </p>
+        </span>
+    </div>
+
+    <button id="btn-parent-colour">get colour of parent of span</button>
+
+    <button id="btn-get-parents">get parents of lists</button>
+
+</body>
+
+</html>
